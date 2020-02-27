@@ -1,0 +1,23 @@
+
+[1mFrom:[0m array.c (C Method):
+[1mOwner:[0m Array
+[1mVisibility:[0m public
+[1mSignature:[0m shift(*arg1)
+[1mNumber of lines:[0m 16
+
+Removes the first element of [32mself[0m and returns it (shifting all
+other elements down by one). Returns [32mnil[0m if the array
+is empty.
+
+If a number [32mn[0m is given, returns an array of the first [32mn[0m elements
+(or less) just like array.slice!([1;34m0[0m, n) does. With [32mary[0m
+containing only the remainder elements, not including what was shifted to
+[32mnew_ary[0m. See also Array#unshift for the opposite effect.
+
+   args = [ [31m[1;31m"[0m[31m-m[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31m-q[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mfilename[1;31m"[0m[31m[0m ]
+   args.shift     [1;34m#=> "-m"[0m
+   args           [1;34m#=> ["-q", "filename"][0m
+
+   args = [ [31m[1;31m"[0m[31m-m[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31m-q[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mfilename[1;31m"[0m[31m[0m ]
+   args.shift([1;34m2[0m)  [1;34m#=> ["-m", "-q"][0m
+   args           [1;34m#=> ["filename"][0m

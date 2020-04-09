@@ -88,6 +88,10 @@ end
         # new array is returned, original array stays the same
     # we call bsearch again on that new subset, which is the second half
     # and so on
+    +
+
+
+
 
 def bsearch(array, target)
     return nil if array.length == 0
